@@ -1,0 +1,48 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Coffes {
+  id Int @id @default(autoincrement())
+  name String 
+  description String
+  coffee_flavor String
+  categoty String
+  img String
+  rating Int 
+  country String
+  price String
+}
+
+model Reserva {
+  id             Int      @id @default(autoincrement())
+  nombreCliente  String
+  apellidoCliente String
+  plan           Plan //Estudios - Cafe - cumpleaños - otros
+  estado         Estado   @default(PENDIENTE) // pendiente - eceptado - rechazado
+  horarioInicio  DateTime? 
+  horarioFin     DateTime?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
+
+enum Plan {
+  ESTUDIOS
+  TRABAJO
+  CUMPLEAÑOS 
+  REUNION
+}
+
+enum Estado {
+  PENDIENTE
+  ACEPTADO
+  RECHAZADO
+}
