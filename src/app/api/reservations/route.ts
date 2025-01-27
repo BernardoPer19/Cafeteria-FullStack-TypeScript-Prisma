@@ -1,7 +1,7 @@
 import { prisma } from "@/utils/prisma";
 import { NextResponse } from "next/server";
 
-// GET
+
 export const GET = async () => {
   try {
     const reservas = await prisma.reserva.findMany();
@@ -15,7 +15,7 @@ export const GET = async () => {
   }
 };
 
-// POST
+
 export const POST = async (req: Request) => {
   try {
     const {
@@ -71,7 +71,7 @@ export const POST = async (req: Request) => {
   }
 };
 
-// PUT
+
 export const PUT = async (req: Request, { params }: { params: { id: string } }) => {
   try {
     const id = Number(params.id);

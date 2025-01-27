@@ -1,7 +1,7 @@
 import { prisma } from "@/utils/prisma";
 import { NextResponse } from "next/server";
 
-// GET
+
 export const GET = async () => {
   try {
     const products = await prisma.coffes.findMany();
@@ -28,7 +28,7 @@ export const POST = async (req: Request) => {
       price,
     } = await req.json();
 
-    // Validar los datos
+
     if (
       !name ||
       !description ||
