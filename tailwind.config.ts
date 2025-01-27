@@ -2,17 +2,10 @@ import type { Config } from "tailwindcss";
 
 export default {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    // Asegúrate de que las rutas cubran todos los archivos relevantes
+    "./app/**/*.{js,ts,jsx,tsx}", // Para todas las páginas y componentes en app/
+    "./src/sections/**/*.{js,ts,jsx,tsx}", // Para tus componentes específicos en src/sections
   ],
-  theme: {
-    extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
-    },
-  },
+  theme: {},
   plugins: [],
 } satisfies Config;

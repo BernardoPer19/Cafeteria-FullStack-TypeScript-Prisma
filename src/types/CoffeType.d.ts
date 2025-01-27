@@ -11,3 +11,12 @@ interface Coffes {
   }
   
   
+// types.ts
+export interface ProductType {
+  id: number;
+  name: string;
+  description: string;
+  image: string;
+  rating: number;
+  link: string;
+}
