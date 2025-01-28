@@ -1,11 +1,22 @@
-import type { Config } from "tailwindcss";
-
+import type { Config } from 'tailwindcss'
+ 
 export default {
   content: [
-    // Asegúrate de que las rutas cubran todos los archivos relevantes
-    "./app/**/*.{js,ts,jsx,tsx}", // Para todas las páginas y componentes en app/
-    "./src/sections/**/*.{js,ts,jsx,tsx}", // Para tus componentes específicos en src/sections
+    './app/**/*.{js,ts,jsx,tsx,mdx}', // Note the addition of the `app` directory.
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+ 
+    // Or if using `src` directory:
+    './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  theme: {},
+  theme: {
+    extend: {
+      colors: {
+        "coffee-light": "#F4E1D2", // Color suave y cálido para fondo
+        "coffee-dark": "#4B3621", // Color oscuro para texto y iconos
+        "coffee-text": "#6A4E36", // Color para textos secundarios
+      },
+    },
+  },
   plugins: [],
-} satisfies Config;
+} satisfies Config

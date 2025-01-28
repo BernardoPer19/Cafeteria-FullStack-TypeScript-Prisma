@@ -1,9 +1,11 @@
-import { prisma } from "@/utils/prisma";
+import { prisma } from "@/libs/prisma";
 import { NextResponse } from "next/server";
 
 interface ParamsType {
   params: { id: number };
 }
+
+
 
 export const DELETE = async (request: Request, { params }: ParamsType) => {
   try {

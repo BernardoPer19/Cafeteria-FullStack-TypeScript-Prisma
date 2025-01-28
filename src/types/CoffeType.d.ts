@@ -1,4 +1,4 @@
-interface Coffes {
+export interface Coffee {
     id: number
     name: string 
     description :string
@@ -16,7 +16,10 @@ export interface ProductType {
   id: number;
   name: string;
   description: string;
-  image: string;
+  coffee_flavor: string;
+  categoty: string;  // Corregido de 'category' a 'categoty'
+  img: string;       // Cambié 'image' por 'img' para que coincida con tu estructura
   rating: number;
-  link: string;
+  country: string;
+  price: string;
 }
