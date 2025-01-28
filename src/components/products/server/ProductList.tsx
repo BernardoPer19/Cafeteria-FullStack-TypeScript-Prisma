@@ -8,24 +8,22 @@ interface ProductListProps {
 }
 
 const ProductList: React.FC<ProductListProps> = ({ products }) => {
-  // Inicializamos el estado con 'cafes' como el botón activo por defecto
   const [activeButton, setActiveButton] = useState<string>("cafes");
 
-  // Función para manejar el clic en los botones y cambiar el estado activo
+ 
   const handleButtonClick = (category: string) => {
-    setActiveButton(category === activeButton ? null : category); // Si el botón ya está activo, lo desactiva
+    setActiveButton(category === activeButton ? null : category); 
   };
 
   return (
     <div className="flex flex-col items-center">
-      {/* Botones de filtrado */}
       <div className="w-full flex justify-center gap-6 mb-6">
         <button
           onClick={() => handleButtonClick("cafes")}
           className={`${
             activeButton === "cafes" 
-              ? "bg-coffee-dark text-coffee-light" // Fondo oscuro para el botón activo
-              : "bg-coffee-light text-coffee-dark" // Fondo claro para los demás botones
+              ? "bg-coffee-dark text-coffee-light" 
+              : "bg-coffee-light text-coffee-dark" 
           } py-2 px-4 rounded-lg transition-colors hover:bg-coffee-light hover:text-coffee-dark`}
         >
           Cafés más pedidos
@@ -52,7 +50,6 @@ const ProductList: React.FC<ProductListProps> = ({ products }) => {
         </button>
       </div>
 
-      {/* Mostrar los productos filtrados */}
       <div className="flex flex-wrap gap-5 justify-center">
         {products.map((product) => (
           <div key={product.id} className="w-80">

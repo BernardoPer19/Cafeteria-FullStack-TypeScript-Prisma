@@ -1,9 +1,31 @@
-import { useState } from "react"
+import { CartType } from "@/types/CoffeType";
+import { useState } from "react";
 
-const useCart = () => {
-    const [e, sets] = useState("second")
-    const [h, seth] = useState("second")
-    const [ca, ser324] = useState("second")
-    const [q, setsz] = useState("second")
-    const [a, setxv] = useState("second")
-}
+export const useCart = () => {
+  const [cart, setCart] = useState<CartType[]>([]);
+
+  const addToCart = (product: CartType) => {
+    setCart((prevItem) => {
+      const existProd = prevItem.find((item) => item.id === product.id);
+      if (existProd) {
+        return prevItem.map((item) =>
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + product.quantity }
+            : item
+        );
+      } else {
+        return [...prevItem, { ...product }];
+      }
+    });
+  };
+
+  const deleteToCart = (id: number) => {
+    setCart((prevItem) => prevItem.filter((item) => item.id !== id));
+  };
+
+  return {
+    cart,
+    addToCart,
+    deleteToCart,
+  };
+};
