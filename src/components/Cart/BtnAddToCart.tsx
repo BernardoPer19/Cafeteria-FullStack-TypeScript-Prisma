@@ -9,15 +9,15 @@ interface BtnAddToCartProps {
 }
 
 function BtnAddToCart({ product }: BtnAddToCartProps) {
-  const { addToCart, cart } = useProductContext();  // Usamos el ProductContext en vez de un hook externo
+  const { addToCart, cart } = useProductContext();
 
-  // Comprobamos si el producto ya está en el carrito
+ 
   const isInCart = cart.some((item) => item.id === product.id);
 
   return (
     <button
       onClick={() => addToCart({ ...product, quantity: 1 })}
-      disabled={isInCart}  // Deshabilitamos el botón si el producto ya está en el carrito
+      disabled={isInCart} 
       className={`flex items-center justify-center py-2 px-4 rounded-lg transition-all ${
         isInCart
           ? "bg-gray-400 text-gray-800 cursor-not-allowed"
