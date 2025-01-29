@@ -4,8 +4,8 @@ export interface FormData {
     apellidoCliente?: string;
     plan: "ESTUDIOS" | "TRABAJO" | "CUMPLEAÑOS" | "REUNION";
     estado: "PENDIENTE" | "ACEPTADO" | "RECHAZADO";
-    horarioInicio?: string | null; // Si viene como JSON, será string
-    horarioFin?: string | null;    // Si viene como JSON, será string
+    horarioInicio?: string | null; 
+    horarioFin?: string | null;   
   }
 
   export interface updateReservation {
