@@ -24,7 +24,7 @@ const useAPI = () => {
         throw new Error("Error al cargar datos");
       }
       const data = await res.json();
-      setReservations(data); // Actualizar el estado con los datos obtenidos
+      setReservations(data); 
     } catch (error) {
       console.error("Error en la solicitud GET:", error);
       setError("Error al cargar datos");
@@ -40,7 +40,7 @@ const useAPI = () => {
     setLoading(true);
 
     try {
-      const newReservation = { ...formData }; // Usar el formData para crear la reserva
+      const newReservation = { ...formData };
       const res = await fetch("http://localhost:3000/api/reservations", {
         method: "POST",
         headers: {
