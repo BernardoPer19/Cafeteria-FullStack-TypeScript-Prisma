@@ -16,8 +16,8 @@ export interface ProductType {
   name: string;
   description: string;
   coffee_flavor: string;
-  categoty: string; // Corregido de 'category' a 'categoty'
-  img: string; // Cambié 'image' por 'img' para que coincida con tu estructura
+  categoty: string; 
+  img: string;
   rating: number;
   country: string;
   price: string;
@@ -26,8 +26,8 @@ export interface ProductType {
 export interface CartType {
   id: number;
   name: string;
-  categoty: string; // Corregido de 'category' a 'categoty'
-  img: string; // Cambié 'image' por 'img' para que coincida con tu estructura
+  categoty: string; 
+  img: string; 
   price: string;
   quantity: number;
 }
