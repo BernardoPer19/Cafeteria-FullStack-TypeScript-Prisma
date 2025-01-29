@@ -4,8 +4,8 @@ export interface ReservationType {
   apellidoCliente: string;
   plan: "ESTUDIOS" | "TRABAJO" | "CUMPLEAÑOS" | "REUNION";
   estado: "PENDIENTE" | "ACEPTADO" | "RECHAZADO";
-  horarioInicio?: string ; // Si viene como JSON, será string
-  horarioFin?: string ;    // Si viene como JSON, será string
-  createdAt: string;            // Las fechas de Prisma se serializan como string
+  horarioInicio?: string ; 
+  horarioFin?: string ;   
+  createdAt: string;           
   updatedAt: string;
 }
