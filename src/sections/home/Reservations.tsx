@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { FaCoffee, FaCheckCircle, FaTimesCircle } from "react-icons/fa"; // Iconos para cafetería
 
@@ -71,12 +72,18 @@ const ReservationTable = () => {
 
         <div className="flex gap-8">
           {" "}
-          <button className="mt-8 bg-[#5a432a] text-white px-10 py-4 rounded-xl hover:bg-[#947048] transition duration-300 shadow-md hover:scale-105">
-            ¡Haz tu reserva!
-          </button>
-          <button className="mt-8 bg-[#947048] text-white px-10 py-4 rounded-xl ] transition duration-300 shadow-md hover:scale-105">
-            ¡Mira las reservas!
-          </button>
+          <Link href={"/reservations-form"}>
+            <button className="mt-8 bg-[#5a432a] text-white px-10 py-4 rounded-xl hover:bg-[#947048] transition duration-300 shadow-md hover:scale-105">
+              ¡Haz tu reserva!
+            </button>
+          </Link>
+          <Link
+          href={"/reservations"}
+          >
+            <button className="mt-8 bg-[#947048] text-white px-10 py-4 rounded-xl ] transition duration-300 shadow-md hover:scale-105">
+              ¡Mira las reservas!
+            </button>
+          </Link>
         </div>
       </div>
     </main>

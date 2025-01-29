@@ -4,7 +4,8 @@ import ProductList from '@/components/homeComponents/server/ProductList';
 
 async function Products() {
   return (
-    <div className="mx-auto p-8 bg-gradient-to-b from-[#f1e0c6] to-[#f7e7c7] min-h-screen">
+    <div className="mx-auto p-8 bg-gradient-to-b from-[#f1e0c6] to-[#f7e7c7] min-h-[89vh]"
+    id='menu'>
       <h1 className="text-4xl font-bold text-center text-coffee-dark mb-8">
         Nuestros Productos
       </h1>

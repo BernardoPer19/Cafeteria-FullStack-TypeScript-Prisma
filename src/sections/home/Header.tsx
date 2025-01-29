@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
  async function Header() {
@@ -24,12 +25,12 @@ import React from "react";
           </p>
 
           {/* Botón de llamada a la acción */}
-          <a
+          <Link
             href="#menu"
             className="bg-yellow-500 text-black py-3 px-8 rounded-full text-lg font-semibold transition duration-300 hover:bg-yellow-400"
           >
             Descubre Nuestro Menú
-          </a>
+          </Link>
         </div>
       </header>
   );

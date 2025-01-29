@@ -1,4 +1,4 @@
-import ProductListPage from "@/components/products/client/server/ProductListPage";
+import ProductListPage from "@/components/products/server/ProductListPage";
 
 const ProductPage = async () => {
 

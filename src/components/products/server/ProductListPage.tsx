@@ -20,7 +20,7 @@ const ProductListPage = async () => {
                 alt={product.name}
                 className="w-full h-56 object-cover"
               />
-              <div className="p-5">
+              <div className="p-5 flex flex-col justify-center">
                 <div className="flex justify-between items-center mb-4">
                   <h3 className="text-2xl font-bold text-brown-900">
                     {product.name}
@@ -40,9 +40,6 @@ const ProductListPage = async () => {
                 </div>
                 <div className="flex flex-col sm:flex-row sm:justify-between gap-3">
                   <BtnAddToCart product={product} />
-                  <button className="flex items-center justify-center bg-[#927354] text-brown-800 py-2 px-4 rounded-lg hover:bg-[#b38d67] transition-all">
-                    Ver Info
-                  </button>
                 </div>
               </div>
             </div>

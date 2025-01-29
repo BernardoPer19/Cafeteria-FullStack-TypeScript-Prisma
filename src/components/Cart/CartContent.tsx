@@ -29,7 +29,7 @@ function CartContent() {
           >
             <div className="flex items-center gap-4">
               <img
-                src={item.img} // Asegúrate de que el objeto `item` tenga esta propiedad
+                src={item.img} 
                 alt={item.name}
                 className="w-16 h-16 object-cover rounded-md border"
               />
