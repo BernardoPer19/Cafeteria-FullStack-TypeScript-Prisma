@@ -10,7 +10,7 @@ function BtnToggle() {
   };
   return (
     <div>
-      <button onClick={toggleCart} className="text-red-500 text-2xl">
+      <button onClick={toggleCart} className="text-black text-2xl">
         x
       </button>
     </div>

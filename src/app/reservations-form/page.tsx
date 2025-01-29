@@ -3,9 +3,9 @@ import React from 'react'
 
 function ReservationsPageForm() {
   return (
-    <div>
+    <main className='bg-[#e1d6c6] min-h-screen pt-48'>
       <ReservationForm/>
-    </div>
+    </main>
   )
 }
 

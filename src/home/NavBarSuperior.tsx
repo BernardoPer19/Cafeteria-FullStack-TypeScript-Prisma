@@ -4,7 +4,7 @@ import { FaCoffee, FaHeadset } from "react-icons/fa"; // Iconos
 
 function NavBarSuperior() {
   return (
-    <div className="fixed top-0 left-0 right-0 bg-white z-20 shadow-md py-2">
+    <div className="fixed top-0 left-0 right-0 bg-[#ece2d3] z-20 shadow-md py-2">
       <div className="flex justify-between items-center px-6">
         <div className="flex items-center space-x-4">
           <FaHeadset className="text-gray-700 text-2xl" />

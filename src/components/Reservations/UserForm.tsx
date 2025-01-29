@@ -3,12 +3,15 @@ import { useState } from "react";
 import { FormData } from "@/types/FormType";
 import useAPI from "@/hooks/useApi";
 import { ToastContainer, toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';  // Asegúrate de importar el CSS global de Toastify
+import "react-toastify/dist/ReactToastify.css"; // Asegúrate de importar el CSS global de Toastify
+import Link from "next/link";
 
 const ReservationForm = () => {
   const { formData, setFormData, createReservation, loading, error } = useAPI();
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -26,11 +29,15 @@ const ReservationForm = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg m-44">
-      <h2 className="text-2xl font-semibold text-center text-brown-800 mb-4">Crea tu Reserva</h2>
+    <div className="max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg ">
+      <h2 className="text-2xl font-semibold text-center text-brown-800 mb-4">
+        Crea tu Reserva
+      </h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label className="block text-sm font-medium text-brown-700">Nombre</label>
+          <label className="block text-sm font-medium text-brown-700">
+            Nombre
+          </label>
           <input
             type="text"
             name="nombreCliente"
@@ -43,7 +50,9 @@ const ReservationForm = () => {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-brown-700">Apellido</label>
+          <label className="block text-sm font-medium text-brown-700">
+            Apellido
+          </label>
           <input
             type="text"
             name="apellidoCliente"
@@ -56,7 +65,9 @@ const ReservationForm = () => {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-brown-700">Plan de Reserva</label>
+          <label className="block text-sm font-medium text-brown-700">
+            Plan de Reserva
+          </label>
           <select
             name="plan"
             value={formData.plan}
@@ -71,7 +82,9 @@ const ReservationForm = () => {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-brown-700">Hora de Inicio</label>
+          <label className="block text-sm font-medium text-brown-700">
+            Hora de Inicio
+          </label>
           <input
             type="datetime-local"
             name="horarioInicio"
@@ -83,7 +96,9 @@ const ReservationForm = () => {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-brown-700">Hora de Fin</label>
+          <label className="block text-sm font-medium text-brown-700">
+            Hora de Fin
+          </label>
           <input
             type="datetime-local"
             name="horarioFin"
@@ -106,7 +121,11 @@ const ReservationForm = () => {
           </button>
         </div>
       </form>
-
+      <Link href={"/reservations"}>
+        <button className="w-full py-2 px-4 bg-brown-600 text-white rounded-md mt-5 hover:bg-brown-700">
+          ¡Mira las reservas!
+        </button>
+      </Link>
       {error && (
         <div className="mt-4 text-center text-red-500">
           <p>{error}</p>

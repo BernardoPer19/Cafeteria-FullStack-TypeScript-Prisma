@@ -17,9 +17,7 @@ function NavBarInferior() {
         <Link href="/reservations-form" className="text-white font-bold mx-4">
           Haz Tu Reserva!
         </Link>
-        <Link href="/Contacto" className="text-white font-bold mx-4">
-        Contacto
-        </Link>
+
       </div>
     </div>
   );
