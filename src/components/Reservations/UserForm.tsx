@@ -3,7 +3,7 @@ import { useState } from "react";
 import { FormData } from "@/types/FormType";
 import useAPI from "@/hooks/useApi";
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css"; // Asegúrate de importar el CSS global de Toastify
+import "react-toastify/dist/ReactToastify.css"; 
 import Link from "next/link";
 
 const ReservationForm = () => {
@@ -132,7 +132,7 @@ const ReservationForm = () => {
         </div>
       )}
 
-      {/* Toast container */}
+   
       <ToastContainer />
     </div>
   );
