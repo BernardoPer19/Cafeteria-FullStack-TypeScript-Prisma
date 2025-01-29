@@ -30,7 +30,7 @@ const ReservationTable = async () => {
                   key={res.id}
                   className="border-b border-[#d1a28e] hover:bg-[#f5e1cc] transition duration-300"
                 >
-                  <td className="py-4 px-6">{res.nombreCliente}</td>
+                  <td className="py-4 px-6">{res.nombreCliente} {res.apellidoCliente}</td>
                   <td className="py-4 px-6">
                     {formatDate(res.horarioInicio) || "Sin horario"}
                   </td>
