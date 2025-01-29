@@ -1,4 +1,4 @@
-import { sora } from "@/app/fonts"; // Importa la fuente Sora
+import { sora } from "@/app/fonts";
 
 async function About() {
   return (
@@ -7,13 +7,13 @@ async function About() {
 
       <div className="relative max-w-[1200px] m-auto w-full h-full flex items-center justify-center">
         <div className="flex gap-5 mr-96 max-[768px]:flex-col max-[768px]:gap-4 max-[768px]:mr-0 max-[768px]:w-full max-[768px]:justify-center">
-          {/* Imagen 1 */}
+          
           <img
             src="https://images.pexels.com/photos/302890/pexels-photo-302890.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt="Imagen 1"
             className="w-80 h-[450px] object-cover bg-blue-50 max-[768px]:w-full max-[768px]:h-[400px] max-[768px]:mb-4" // Aumentar la altura y agregar margen inferior
           />
-          {/* Imagen 2 solo visible en pantallas grandes */}
+         
           <img
             src="https://plus.unsplash.com/premium_photo-1663858367004-a79cbaa15d76?q=80&w=1015&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="Imagen 2"
