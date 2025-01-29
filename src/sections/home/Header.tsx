@@ -1,6 +1,6 @@
 import React from "react";
 
- function Header() {
+ async function Header() {
   return (
       <header
         className="relative w-full h-[80vh] bg-cover bg-center bg-fixed "

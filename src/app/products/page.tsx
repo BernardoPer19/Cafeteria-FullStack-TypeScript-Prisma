@@ -1,9 +1,6 @@
-import fetchCoffes from "@/utils/FetchCoffes";
-import { Coffee } from "@/types/CoffeType";
-import ProductListPage from "@/components/productsPage/server/ProductListPage";
+import ProductListPage from "@/components/products/client/server/ProductListPage";
 
 const ProductPage = async () => {
-  const products: Coffee[] = await fetchCoffes();
 
   return (
     <main className="  bg-[#bd9f80]">

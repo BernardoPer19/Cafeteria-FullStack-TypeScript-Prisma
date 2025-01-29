@@ -1,8 +1,8 @@
 import React from 'react';
 import products from '@/data/OurProds';
-import ProductList from '@/components/products/server/ProductList';
+import ProductList from '@/components/homeComponents/server/ProductList';
 
-function Products() {
+async function Products() {
   return (
     <div className="mx-auto p-8 bg-gradient-to-b from-[#f1e0c6] to-[#f7e7c7] min-h-screen">
       <h1 className="text-4xl font-bold text-center text-coffee-dark mb-8">

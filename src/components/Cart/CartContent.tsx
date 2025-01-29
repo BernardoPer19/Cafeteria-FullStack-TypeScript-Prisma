@@ -9,7 +9,7 @@ function CartContent() {
 
   if (cart.length === 0) {
     return (
-      <div className="p-6 text-center text-gray-500">
+      <div className="p-6 text-center text-white">
         <h2 className="text-xl font-semibold">Tu carrito está vacío</h2>
         <p className="text-sm">¡Agrega productos para comenzar a comprar!</p>
       </div>

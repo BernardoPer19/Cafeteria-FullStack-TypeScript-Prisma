@@ -8,12 +8,12 @@ const ProductListPage = async () => {
 
   return (
     <main>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div className="flex flex-wrap gap-8 mx-auto justify-center items-center">
         {products.length > 0 ? (
           products.map((product) => (
             <div
               key={product.id}
-              className="bg-white shadow-xl rounded-lg overflow-hidden transform hover:scale-105 transition-all w-96 flex flex-col justify-center"
+              className="bg-white shadow-xl rounded-lg overflow-hidden transform hover:scale-105 transition-all sm:w-1/2 md:w-1/3 lg:w-1/4 flex flex-col justify-center"
             >
               <img
                 src={product.img}

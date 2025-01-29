@@ -1,6 +1,6 @@
 import { sora } from "@/app/fonts"; // Importa la fuente Sora
 
-function About() {
+async function About() {
   return (
     <main className="bg-[#e1d6c6] w-full h-[70vh]">
 

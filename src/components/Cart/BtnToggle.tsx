@@ -1,3 +1,4 @@
+"use client"
 import { useProductContext } from "@/context/ProductContext";
 import React from "react";
 

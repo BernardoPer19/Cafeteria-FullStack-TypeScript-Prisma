@@ -1,7 +1,7 @@
 import React from "react";
 import { FaCoffee, FaTruck, FaCreditCard } from "react-icons/fa"; // Importamos los iconos que necesitamos
 
-function CardsHeader() {
+async function CardsHeader() {
   return (
     <main className="h-auto p-6 bg-[#e1d6c6]">
       <div className="flex justify-center gap-4 p-4">
